@@ -1,0 +1,15 @@
+<button nz-button nzType="primary" [ngStyle]="{'margin-bottom.px': 20}" (click)="newGame()">Создать новую игру</button>
+<nz-list
+  [nzDataSource]="list | async"
+  nzBordered
+  nzSize="small"
+  [nzHeader]="'Список игорокв ожидающих партии'"
+  [nzRenderItem]="smallItem"
+>
+  <ng-template #smallItem let-item>
+    <nz-list-item [nzContent]="content" (click)="select(item.gameId)">
+      <ng-template #content>{{item.ownerName}}</ng-template>
+    </nz-list-item>
+  </ng-template>
+
+</nz-list>

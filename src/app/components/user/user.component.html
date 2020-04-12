@@ -1,0 +1,7 @@
+<a *ngIf="!user" nz-button nzType="default" [routerLink]="['/login_user']"><i nz-icon nzType="login" nzTheme="outline"></i> Login</a>
+<nz-content *ngIf="user">
+  <button nz-button ><i nz-icon nzType="user" nzTheme="outline"></i> {{user.login}}</button>
+  <nz-divider nzType="vertical"></nz-divider>
+  <button nz-button (click)="logout()"><i nz-icon nzType="logout" nzTheme="outline"></i> Logout</button>
+</nz-content>
+

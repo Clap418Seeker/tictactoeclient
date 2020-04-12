@@ -1,0 +1,5 @@
+<div nz-row nzGutter="16" *ngFor="let row of _fields; index as x" >
+  <div nzSpan="8" *ngFor="let f of row; index as y" (click)="doClick(x+1, y+1)">
+    <div class="gutter-box">{{f == 1 ? 'X' : f == 2 ? 'O' : ''}}</div>
+  </div>
+</div>

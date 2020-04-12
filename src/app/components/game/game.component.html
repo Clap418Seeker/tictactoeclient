@@ -1,0 +1,4 @@
+<game-fields [fields]="fields | async" (clickEvent)="move($event)"></game-fields>
+<nz-divider></nz-divider>
+<button *ngIf="winStatus == winStatuses.None" nz-button nzType="danger" (click)="forceEndGame()">Сдаться</button>
+<button *ngIf="winStatus != winStatuses.None" nz-button nzType="success" (click)="forceEndGame()">Выйти</button>

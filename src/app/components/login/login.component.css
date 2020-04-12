@@ -1,0 +1,17 @@
+.login-form {
+  max-width: 300px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+nz-divider {
+  margin: 15px 0 7px 0;
+}
+
+
